@@ -1,0 +1,32 @@
+{
+    "name": "Virtuosa Home Clipper",
+    "version": "1.0",
+    "manifest_version": 2,
+    "description": "Easily add things to a Virtuosa Home inventory: click the button on any supported merchant's product page, and it quickly shows up!",
+	
+	"icons": {
+		"128": "128.png"
+	},
+
+    "permissions": [
+		"activeTab" 
+     ],
+	 	
+	"browser_action": {
+		"default_icon": {
+			"32" : "32.png"
+		},
+		"default_title": "Virtuosa Home Clipper"		
+	},
+	
+	"background": {
+		"scripts": ["background.js"]
+	},    
+  
+  "content_scripts": [ {
+      "js": [ "content.js" ],
+      "matches": [ "http://*/*", "https://*/*" ]
+   } ]
+  
+
+}
